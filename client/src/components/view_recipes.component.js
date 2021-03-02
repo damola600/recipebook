@@ -32,7 +32,7 @@ export default class ViewRecipe extends Component{
                  alert("error retrieving data");
              });
     }
-//this function displays the recipe on the page.
+//this function displays the recipe on the page as an html form
     displayRecipe = (recipe) => {
         if(!recipe.length) return null;
         return recipe.map((recipes, index) => (
