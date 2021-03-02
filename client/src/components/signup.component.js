@@ -22,18 +22,8 @@ export default class SignUp extends Component{
         }
     }
 
-    // componentDidMount(){
-    //     this.setState({
-    //         users: ['recipebook user'],
-    //         firstname: 'recipebook user',
-    //         lastname: 'recipebook user',
-    //         username: 'recipebook user',
-    //        email: 'recipebook user',
-    //        password: 'recipebook user',
-            
-    //     });
-    // }
-
+    
+//this functions check the state of the forms input and then changes it if it is changed
     onChangeFirstname(e){
         this.setState({
             firstname: e.target.value
@@ -63,7 +53,7 @@ export default class SignUp extends Component{
             password: e.target.value
         });
     }
-
+//this function is called when the form is submited and then saves the user information in the database
     onHandleSubmit(e){
         e.preventDefault();
 

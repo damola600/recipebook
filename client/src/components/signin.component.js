@@ -4,7 +4,7 @@ import axios from 'axios';
 export default class SignIn extends Component{
     constructor(props){
         super(props);
-
+//constructor for the functions
         this.changeUsername = this.changeUsername.bind(this);
         this.changePassword = this.changePassword.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,7 +14,7 @@ export default class SignIn extends Component{
             password: ''
          }
     }
-
+//this function calls the backend and gets the username and password from the database
     componentDidMount(){
         axios.get('/users/' + this.props.match.params.id )
              .then(response => {
@@ -27,7 +27,7 @@ export default class SignIn extends Component{
                  console.log(error);
              })
     }
-
+//functions to check state of the form input
     changeUsername(e){
         this.setState({
             username: e.target.value
@@ -40,7 +40,7 @@ export default class SignIn extends Component{
             password: e.target.value
         });
     }
-
+//this function is called when the form is submitted
     handleSubmit(e){
         e.preventDefault();
 
@@ -57,7 +57,7 @@ export default class SignIn extends Component{
 
         window.location = "/home";
     }
-
+//this funcion is used to display the html form
     render(){
         return(
             <div>

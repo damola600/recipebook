@@ -1,10 +1,12 @@
+//imports that are needed to make the code work.
 import React from 'react';
 import emailjs from 'emailjs-com';
 import { Link } from 'react-router-dom';
 
 
 export default function Contact() {
-
+   
+//function to send request to the emailjs
   function send(e) {
     e.preventDefault();
 
@@ -15,10 +17,10 @@ export default function Contact() {
           console.log(error.text);
       });
   }
-
+//this is the contact form
   return (
     <form className="contact-form" onSubmit={send}>
-      <input type="hidden" name="contact_number" />
+      
       <label>Name</label>
       <input type="text" name="user_name" className="form-control"/>
       <label>Email</label>

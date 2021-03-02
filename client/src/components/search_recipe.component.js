@@ -7,15 +7,15 @@ export default class SearchRecipe extends Component{
         searchItem: "",
         meals: []
       };
-    
+    //function checks everytime the input is change and changes it
       handleChangeMeal = event => {
         this.setState({ searchItem: event.target.value });
       };
-    
+    //function is called when the form is submitted
       submitSearch = () => {
         this.callAPI(this.state.searchItem);
       };
-    
+    //this function is used to call the api and get the json file from it.
       callAPI = searchRecipe => {
         var searchUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchRecipe}`;
         fetch(searchUrl)
@@ -26,7 +26,7 @@ export default class SearchRecipe extends Component{
             this.setState({ meals: jsonData.meals });
           });
       };
-    
+    //function to display the html
       render() {
         return (
           <div>

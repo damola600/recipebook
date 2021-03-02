@@ -14,13 +14,13 @@ export default class ViewRecipe extends Component{
     }
 
     
-
+//this function calls the recipeData() function
     componentDidMount(){
         this.recipeData();
     }
 
   
-
+//this function gets the list of recipe from the database using axios
     recipeData =() =>{
         axios.get('/recipes/')
              .then((response) => {
@@ -32,14 +32,17 @@ export default class ViewRecipe extends Component{
                  alert("error retrieving data");
              });
     }
-
+//this function displays the recipe on the page.
     displayRecipe = (recipe) => {
         if(!recipe.length) return null;
         return recipe.map((recipes, index) => (
             <div key = {index}>
+                <h2><span className="badge badge-secondary">Meal Name</span></h2>
                 <h3>{recipes.mealname}</h3>
-                <textarea className="form-control" rows="8">{recipes.instructions}</textarea>
-                <textarea className="form-control" rows="8">{recipes.ingredients}</textarea>
+                <h2><span className="badge badge-secondary">Instructions</span></h2>
+                <li>{recipes.instructions}</li>
+                <h2><span className="badge badge-secondary">Ingredients</span></h2>
+                <li>{recipes.ingredients}</li>
             </div>
         ));
     };

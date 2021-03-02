@@ -1,7 +1,8 @@
+//this imports react, bootstrap router, route
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
+//imports the pages from the component folder
 import Navbar from "./components/navbar.component";
 import SignUp from "./components/signup.component";
 import SignIn from "./components/signin.component";
@@ -15,7 +16,7 @@ function App() {
 
  
   return (
-    
+    //the router allows me to move from one page to another as a route for each page is declared.
     <Router>
        <div className="container">
        <div id="intro" class="mx-auto">
