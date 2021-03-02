@@ -9,10 +9,7 @@ import HomePage from "./components/homepage.component";
 import AddRecipe from "./components/add_recipe.component";
 import ViewRecipe from "./components/view_recipes.component";
 import SearchRecipe from "./components/search_recipe.component";
-//import ListCategories from "./components/list_categories.component";
-// import Firebase from 'firebase';
-// import firebaseConfig from "./config";
-//import homepagelogo from './rice-food.jpg';
+import Contact from "./components/contact.component";
 
 function App() {
 
@@ -33,7 +30,7 @@ function App() {
          <Route path="/add"  component={AddRecipe} />
          <Route path="/view"  component={ViewRecipe} />
          <Route path="/search"  component={SearchRecipe} />
-        {/* // <Route path="/list" component={ListCategories} /> */}
+         <Route path="/contact" component={Contact} />
       </div>
         
          

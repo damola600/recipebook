@@ -1,11 +1,10 @@
+//this page is the homepage and it contains link to the other pages in this application
 import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
-//import SearchRecipe from "./search_recipe.component.js";
-//import AddRecipe from "./add_recipe.component.js";
-//import ViewRecipe from "./view_recipes.component.js";
+
 export default class HomePage extends Component{
     
-
+//render function for the html 
     render(){
         return(
             <div>
@@ -13,6 +12,7 @@ export default class HomePage extends Component{
                     <h3><span class="badge badge-secondary">RECIPE BOOK HOMEPAGE</span></h3>
                 </div>
             <div>
+                
                 <nav className="navbar navbar-dark bg-dark navbar-expand-xl">
                     <Link to="/home" className="navbar-brand">WELCOME</Link>
                     
@@ -30,9 +30,9 @@ export default class HomePage extends Component{
                                 <Link to="/view" className="nav-link">View Recipes</Link>
                             </li>
 
-                            {/* <li className="nav-item">
-                                <Link to="/list" className="nav-link">List Meal Categories</Link>
-                            </li> */}
+                            <li className="nav-item">
+                                <Link to="/contact" className="nav-link">Contact Us</Link>
+                            </li>
 
                         </ul>
                     </div>
