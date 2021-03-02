@@ -65,7 +65,7 @@ export default class AddRecipe extends Component{
             ingredients: this.state.ingredients
         };
 
-        axios.post('http://localhost:5000/recipes/add', recipe)
+        axios.post('/recipes/add', recipe)
              .then(res => console.log(res.data));
        
 

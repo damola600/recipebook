@@ -22,7 +22,7 @@ export default class ViewRecipe extends Component{
   
 
     recipeData =() =>{
-        axios.get('http://localhost:5000/recipes/')
+        axios.get('/recipes/')
              .then((response) => {
                  const data = response.data;
                  this.setState({recipe: data});
